@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--
+      GitHub Pages no permite fijar cabeceras HTTP propias, así que la CSP
+      va aquí como meta tag (única vía disponible en un hosting estático).
+      script-src 'self' es seguro porque el build de Vite no genera scripts
+      inline, todo son módulos con src= al mismo origen. Si en el futuro se
+      apunta a un backend real (VITE_API_BASE en otro dominio), añadir ese
+      origen a connect-src o esta política romperá las llamadas a la API.
+
+      frame-ancestors no tiene efecto aquí: los navegadores lo ignoran por
+      completo cuando la CSP llega vía <meta> en vez de una cabecera HTTP
+      real (confirmado con un warning real en consola). Se deja en la
+      directiva por si algún día se pasa a un hosting con cabeceras propias,
+      pero la protección anti-clickjacking real de esta web es el chequeo en
+      JS al arrancar src/main.tsx (window.top !== window.self).
+
+      Google Analytics 4 (src/lib/analytics.ts, cargado solo con
+      consentimiento de "analítica") necesita cargar gtag.js desde
+      googletagmanager.com y enviar los eventos a google-analytics.com. El
+      subdominio de destino de los eventos varía según la región del
+      visitante (region1.google-analytics.com, region2..., etc.), por eso
+      connect-src usa un wildcard aquí en vez del origen exacto como en el
+      resto de la política.
+    -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://www.googletagmanager.com https://formsubmit.co; object-src 'none'; base-uri 'self'; form-action 'self' https://formsubmit.co; frame-ancestors 'none'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="canonical" href="https://uclcampus.com/">
+    <meta name="theme-color" content="#1c2b5e">
+    <title>UCLCampus · Formación online de calidad</title>
+
+    <!-- SEO -->
+    <meta name="description" content="UCLCampus: universidad online en Malta acreditada por la MFHEA. Másteres, MBA y doctorado oficiales, 100% online, válidos en el EEES, Reino Unido y la Commonwealth.">
+    <!--
+      OBRAS: mientras la web no sea pública (cambio de nombre MFHEA pendiente)
+      va en noindex para que Google no la muestre. Producción (uclcampus.com)
+      sirve una página de "en construcción"; la web completa vive en el
+      entorno de preview (preview.uclcampus.com), también noindex y sin
+      enlazar. Al salir a producción: devolver a "index, follow".
+    -->
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Open Graph / redes sociales -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="UCLCampus">
+    <meta property="og:title" content="UCLCampus · Universidad online acreditada en Malta">
+    <meta property="og:description" content="Másteres, MBA y doctorado oficiales, 100% online, acreditados por la MFHEA y válidos en el EEES, Reino Unido y la Commonwealth.">
+    <meta property="og:url" content="https://uclcampus.com/">
+    <meta property="og:image" content="https://uclcampus.com/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="es_ES">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="UCLCampus · Universidad online acreditada en Malta">
+    <meta name="twitter:description" content="Másteres, MBA y doctorado oficiales, 100% online, acreditados por la MFHEA y válidos en el EEES, Reino Unido y la Commonwealth.">
+    <meta name="twitter:image" content="https://uclcampus.com/og-image.png">
+
+    <!--
+      JSON-LD (datos estructurados): un <script type="application/ld+json">
+      es un bloque de datos, no código ejecutable, así que la CSP
+      "script-src 'self'" de arriba no lo bloquea (los navegadores no aplican
+      script-src a bloques que no son JS ejecutable).
+    -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollegeOrUniversity",
+      "name": "UCLCampus",
+      "alternateName": "UCL Campus Malta",
+      "url": "https://uclcampus.com/",
+      "logo": "https://uclcampus.com/logo-schema.png",
+      "description": "Universidad online acreditada por la MFHEA (licencia 2023-015). Ofrece másteres, MBA y doctorado oficiales, 100% online, válidos en el Espacio Europeo de Educación Superior, Reino Unido y la Commonwealth.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "40 Villa Fairholme, Sir Augustus Bartolo Street",
+        "addressLocality": "Ta' Xbiex",
+        "postalCode": "XBX 1095",
+        "addressCountry": "MT"
+      },
+      "email": "info@uclcampus.com"
+    }
+    </script>
+    <script type="module" crossorigin src="/index-BCFVPepZ.js"></script>
+    <link rel="modulepreload" crossorigin href="/jsx-runtime-CZcjcDnw.js">
+    <link rel="modulepreload" crossorigin href="/react-DQyofxZ5.js">
+    <link rel="modulepreload" crossorigin href="/createLucideIcon-Cm3ZaT1G.js">
+    <link rel="modulepreload" crossorigin href="/useLocalizedPath-BIoudrg2.js">
+    <link rel="modulepreload" crossorigin href="/proxy-6YO5epEj.js">
+    <link rel="stylesheet" crossorigin href="/index-Cv2PS85S.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

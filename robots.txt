@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /mi-area
+Disallow: /login
+Disallow: /cursos
+
+Sitemap: https://uclcampus.com/sitemap.xml

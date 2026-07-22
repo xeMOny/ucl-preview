@@ -1,0 +1,15 @@
+{
+  "name": "UCLCampus · Formación online de calidad",
+  "short_name": "UCLCampus",
+  "description": "Universidad online con programas de grado y postgrado en desarrollo web, gestión de proyectos y marketing digital.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#1c2b5e",
+  "background_color": "#ffffff",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}

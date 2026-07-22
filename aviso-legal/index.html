@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--
+      GitHub Pages no permite fijar cabeceras HTTP propias, así que la CSP
+      va aquí como meta tag (única vía disponible en un hosting estático).
+      script-src 'self' es seguro porque el build de Vite no genera scripts
+      inline, todo son módulos con src= al mismo origen. Si en el futuro se
+      apunta a un backend real (VITE_API_BASE en otro dominio), añadir ese
+      origen a connect-src o esta política romperá las llamadas a la API.
+
+      frame-ancestors no tiene efecto aquí: los navegadores lo ignoran por
+      completo cuando la CSP llega vía <meta> en vez de una cabecera HTTP
+      real (confirmado con un warning real en consola). Se deja en la
+      directiva por si algún día se pasa a un hosting con cabeceras propias,
+      pero la protección anti-clickjacking real de esta web es el chequeo en
+      JS al arrancar src/main.tsx (window.top !== window.self).
+
+      Google Analytics 4 (src/lib/analytics.ts, cargado solo con
+      consentimiento de "analítica") necesita cargar gtag.js desde
+      googletagmanager.com y enviar los eventos a google-analytics.com. El
+      subdominio de destino de los eventos varía según la región del
+      visitante (region1.google-analytics.com, region2..., etc.), por eso
+      connect-src usa un wildcard aquí en vez del origen exacto como en el
+      resto de la política.
+    -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://www.googletagmanager.com https://formsubmit.co; object-src 'none'; base-uri 'self'; form-action 'self' https://formsubmit.co; frame-ancestors 'none'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="canonical" href="https://uclcampus.com/aviso-legal/">
+    <meta name="theme-color" content="#1c2b5e">
+    <title>Aviso Legal · UCLCampus</title>
+
+    <!-- SEO -->
+    <meta name="description" content="UCLCampus: universidad online en Malta acreditada por la MFHEA. Másteres, MBA y doctorado oficiales, 100% online, válidos en el EEES, Reino Unido y la Commonwealth.">
+    <!--
+      OBRAS: mientras la web no sea pública (cambio de nombre MFHEA pendiente)
+      va en noindex para que Google no la muestre. Producción (uclcampus.com)
+      sirve una página de "en construcción"; la web completa vive en el
+      entorno de preview (preview.uclcampus.com), también noindex y sin
+      enlazar. Al salir a producción: devolver a "index, follow".
+    -->
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Open Graph / redes sociales -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="UCLCampus">
+    <meta property="og:title" content="UCLCampus · Universidad online acreditada en Malta">
+    <meta property="og:description" content="Másteres, MBA y doctorado oficiales, 100% online, acreditados por la MFHEA y válidos en el EEES, Reino Unido y la Commonwealth.">
+    <meta property="og:url" content="https://uclcampus.com/">
+    <meta property="og:image" content="https://uclcampus.com/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="es_ES">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="UCLCampus · Universidad online acreditada en Malta">
+    <meta name="twitter:description" content="Másteres, MBA y doctorado oficiales, 100% online, acreditados por la MFHEA y válidos en el EEES, Reino Unido y la Commonwealth.">
+    <meta name="twitter:image" content="https://uclcampus.com/og-image.png">
+
+    <!--
+      JSON-LD (datos estructurados): un <script type="application/ld+json">
+      es un bloque de datos, no código ejecutable, así que la CSP
+      "script-src 'self'" de arriba no lo bloquea (los navegadores no aplican
+      script-src a bloques que no son JS ejecutable).
+    -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollegeOrUniversity",
+      "name": "UCLCampus",
+      "alternateName": "UCL Campus Malta",
+      "url": "https://uclcampus.com/",
+      "logo": "https://uclcampus.com/logo-schema.png",
+      "description": "Universidad online acreditada por la MFHEA (licencia 2023-015). Ofrece másteres, MBA y doctorado oficiales, 100% online, válidos en el Espacio Europeo de Educación Superior, Reino Unido y la Commonwealth.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "40 Villa Fairholme, Sir Augustus Bartolo Street",
+        "addressLocality": "Ta' Xbiex",
+        "postalCode": "XBX 1095",
+        "addressCountry": "MT"
+      },
+      "email": "info@uclcampus.com"
+    }
+    </script>
+    <script type="module" crossorigin="" src="/index-BCFVPepZ.js"></script>
+    
+    
+    
+    
+    
+    <link rel="stylesheet" crossorigin="" href="/index-Cv2PS85S.css">
+  <link rel="alternate" hreflang="es" href="https://uclcampus.com/aviso-legal/"><link rel="alternate" hreflang="en" href="https://uclcampus.com/en/aviso-legal/"><link rel="alternate" hreflang="fr" href="https://uclcampus.com/fr/aviso-legal/"><link rel="alternate" hreflang="it" href="https://uclcampus.com/it/aviso-legal/"><link rel="alternate" hreflang="x-default" href="https://uclcampus.com/aviso-legal/"></head>
+  <body>
+    <div id="root"><div><main><div class="min-h-screen bg-white text-slate-700"><div class="max-w-3xl mx-auto px-4 py-16"><a class="inline-flex items-center gap-1.5 text-sm text-brand-blue hover:text-brand-navy transition mb-8" href="/" data-discover="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left" aria-hidden="true"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg> Volver al inicio</a><div class="flex items-center gap-3 mb-6"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scale text-brand-blue" aria-hidden="true"><path d="M12 3v18"></path><path d="m19 8 3 8a5 5 0 0 1-6 0zV7"></path><path d="M3 7h1a17 17 0 0 0 8-2 17 17 0 0 0 8 2h1"></path><path d="m5 8 3 8a5 5 0 0 1-6 0zV7"></path><path d="M7 21h10"></path></svg><h1 class="text-3xl font-bold text-brand-navy">Aviso Legal</h1></div><p class="text-slate-500 mb-8 text-sm">Última actualización: julio de 2026</p><section class="mb-10"><h2 class="text-xl font-bold mb-3 text-brand-navy">Identidad del titular</h2><div class="text-slate-600 leading-relaxed space-y-3"><p>UCLCampus (nombre comercial). Razón social, domicilio fiscal, NIF y datos de inscripción registral pendientes de completar por el titular del proyecto antes de publicar en producción. Contacto: info@uclcampus.com.</p></div></section><section class="mb-10"><h2 class="text-xl font-bold mb-3 text-brand-navy">Objeto del sitio web</h2><div class="text-slate-600 leading-relaxed space-y-3"><p>Este sitio ofrece información sobre nuestros programas formativos, permite solicitar información, y da acceso a la plataforma de formación (LMS) a los alumnos matriculados.</p></div></section><section class="mb-10"><h2 class="text-xl font-bold mb-3 text-brand-navy">Propiedad intelectual</h2><div class="text-slate-600 leading-relaxed space-y-3"><p>Los contenidos de este sitio (textos, diseño, logotipos, código) son propiedad de UCLCampus o de terceros que han autorizado su uso, salvo que se indique lo contrario. Queda prohibida su reproducción sin autorización expresa.</p></div></section><section class="mb-10"><h2 class="text-xl font-bold mb-3 text-brand-navy">Responsabilidad</h2><div class="text-slate-600 leading-relaxed space-y-3"><p>Trabajamos para que la información publicada sea exacta y esté actualizada, pero no garantizamos la ausencia de errores. Nos reservamos el derecho a modificar el contenido de este sitio en cualquier momento.</p></div></section><section class="mb-10"><h2 class="text-xl font-bold mb-3 text-brand-navy">Legislación aplicable</h2><div class="text-slate-600 leading-relaxed space-y-3"><p>Este aviso legal se rige por la legislación aplicable en materia de servicios de la sociedad de la información y protección de datos vigente en el territorio donde opera UCLCampus.</p></div></section></div></div></main><div class="fixed bottom-0 inset-x-0 z-[100] p-4 pointer-events-none" style="opacity: 1; transform: none;"><div class="relative max-w-3xl mx-auto bg-white border border-slate-200 rounded-xl shadow-2xl shadow-slate-900/20 overflow-hidden pointer-events-auto"><div class="p-5"><div class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cookie text-brand-blue shrink-0 mt-0.5" aria-hidden="true"><path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"></path><path d="M8.5 8.5v.01"></path><path d="M16 15.5v.01"></path><path d="M12 12v.01"></path><path d="M11 17v.01"></path><path d="M7 14v.01"></path></svg><div class="flex-1"><h2 class="font-bold mb-1 text-brand-navy">Usamos cookies</h2><p class="text-sm text-slate-600">Usamos cookies necesarias para el funcionamiento del sitio y, solo si nos das tu consentimiento, cookies analíticas y de marketing. Puedes cambiar tu decisión cuando quieras desde <span class="text-brand-blue">Configuración de cookies</span> en el pie de página. Más info en nuestra <a class="underline hover:text-brand-blue transition" href="/cookies" data-discover="true">Política de Cookies</a>.</p></div></div><div class="mt-5 flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-end"><button type="button" class="text-sm text-slate-500 hover:text-brand-blue transition sm:mr-auto">Personalizar</button><button type="button" class="px-5 py-2 rounded-lg text-sm font-semibold border border-slate-300 text-brand-navy hover:bg-slate-100 transition">Rechazar</button><button type="button" class="px-5 py-2 rounded-lg text-sm font-semibold bg-brand-blue hover:bg-brand-navy text-white transition">Aceptar todas</button></div></div><button type="button" aria-label="Cerrar (equivale a rechazar las cookies opcionales)" title="Cerrar (equivale a rechazar las cookies opcionales)" class="absolute top-3 right-3 text-slate-400 hover:text-brand-blue transition"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button></div></div></div></div>
+  
+
+</body></html>

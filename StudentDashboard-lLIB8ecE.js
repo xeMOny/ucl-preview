@@ -1,0 +1,1 @@
+import{t as e}from"./jsx-runtime-CZcjcDnw.js";var t=e();function n(){return(0,t.jsxs)(`main`,{className:`legacy-app`,style:{padding:32},children:[(0,t.jsx)(`h2`,{children:`Mi área`}),(0,t.jsx)(`p`,{children:`Aquí verá el alumno sus cursos matriculados, progreso y evaluaciones. Requiere login.`})]})}export{n as default};
