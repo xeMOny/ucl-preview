@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="it"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--
+      GitHub Pages no permite fijar cabeceras HTTP propias, así que la CSP
+      va aquí como meta tag (única vía disponible en un hosting estático).
+      script-src 'self' es seguro porque el build de Vite no genera scripts
+      inline, todo son módulos con src= al mismo origen. Si en el futuro se
+      apunta a un backend real (VITE_API_BASE en otro dominio), añadir ese
+      origen a connect-src o esta política romperá las llamadas a la API.
+
+      frame-ancestors no tiene efecto aquí: los navegadores lo ignoran por
+      completo cuando la CSP llega vía <meta> en vez de una cabecera HTTP
+      real (confirmado con un warning real en consola). Se deja en la
+      directiva por si algún día se pasa a un hosting con cabeceras propias,
+      pero la protección anti-clickjacking real de esta web es el chequeo en
+      JS al arrancar src/main.tsx (window.top !== window.self).
+
+      Google Analytics 4 (src/lib/analytics.ts, cargado solo con
+      consentimiento de "analítica") necesita cargar gtag.js desde
+      googletagmanager.com y enviar los eventos a google-analytics.com. El
+      subdominio de destino de los eventos varía según la región del
+      visitante (region1.google-analytics.com, region2..., etc.), por eso
+      connect-src usa un wildcard aquí en vez del origen exacto como en el
+      resto de la política.
+    -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://www.googletagmanager.com https://formsubmit.co; object-src 'none'; base-uri 'self'; form-action 'self' https://formsubmit.co; frame-ancestors 'none'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="canonical" href="https://uclcampus.com/it/oferta/grado-biomedicina/">
+    <meta name="theme-color" content="#1c2b5e">
+    <title>Laurea in Biomedicina · UCLCampus</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Stiamo preparando le informazioni dettagliate di questo programma. Presto troverai qui il piano di studi, i requisiti di accesso e gli sbocchi professionali.">
+    <!--
+      OBRAS: mientras la web no sea pública (cambio de nombre MFHEA pendiente)
+      va en noindex para que Google no la muestre. Producción (uclcampus.com)
+      sirve una página de "en construcción"; la web completa vive en el
+      entorno de preview (preview.uclcampus.com), también noindex y sin
+      enlazar. Al salir a producción: devolver a "index, follow".
+    -->
+    <meta name="robots" content="noindex, nofollow">
+
+    <!--
+      Portada del entorno de preview (ver public/gate.js). Se activa SOLO en
+      el host preview.uclcampus.com; en producción/local no hace nada.
+    -->
+    <script src="/gate.js"></script>
+
+    <!-- Open Graph / redes sociales -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="UCLCampus">
+    <meta property="og:title" content="UCLCampus · Universidad online acreditada en Malta">
+    <meta property="og:description" content="Másteres, MBA y doctorado oficiales, 100% online, acreditados por la MFHEA y válidos en el EEES, Reino Unido y la Commonwealth.">
+    <meta property="og:url" content="https://uclcampus.com/">
+    <meta property="og:image" content="https://uclcampus.com/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="es_ES">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="UCLCampus · Universidad online acreditada en Malta">
+    <meta name="twitter:description" content="Másteres, MBA y doctorado oficiales, 100% online, acreditados por la MFHEA y válidos en el EEES, Reino Unido y la Commonwealth.">
+    <meta name="twitter:image" content="https://uclcampus.com/og-image.png">
+
+    <!--
+      JSON-LD (datos estructurados): un <script type="application/ld+json">
+      es un bloque de datos, no código ejecutable, así que la CSP
+      "script-src 'self'" de arriba no lo bloquea (los navegadores no aplican
+      script-src a bloques que no son JS ejecutable).
+    -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollegeOrUniversity",
+      "name": "UCLCampus",
+      "alternateName": "UCL Campus Malta",
+      "url": "https://uclcampus.com/",
+      "logo": "https://uclcampus.com/logo-schema.png",
+      "description": "Universidad online acreditada por la MFHEA (licencia 2023-015). Ofrece másteres, MBA y doctorado oficiales, 100% online, válidos en el Espacio Europeo de Educación Superior, Reino Unido y la Commonwealth.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "40 Villa Fairholme, Sir Augustus Bartolo Street",
+        "addressLocality": "Ta' Xbiex",
+        "postalCode": "XBX 1095",
+        "addressCountry": "MT"
+      },
+      "email": "info@uclcampus.com"
+    }
+    </script>
+    <script type="module" crossorigin="" src="/index-BeaHn_Aq.js"></script>
+    
+    
+    
+    
+    
+    <link rel="stylesheet" crossorigin="" href="/index-CNaEFLkU.css">
+  <link rel="alternate" hreflang="es" href="https://uclcampus.com/oferta/grado-biomedicina/"><link rel="alternate" hreflang="en" href="https://uclcampus.com/en/oferta/grado-biomedicina/"><link rel="alternate" hreflang="fr" href="https://uclcampus.com/fr/oferta/grado-biomedicina/"><link rel="alternate" hreflang="it" href="https://uclcampus.com/it/oferta/grado-biomedicina/"><link rel="alternate" hreflang="x-default" href="https://uclcampus.com/oferta/grado-biomedicina/"></head>
+  <body>
+    <div id="root"><div><main><div class="min-h-screen bg-white text-slate-700"><header class="sticky top-0 bg-white/95 backdrop-blur z-50 border-b border-slate-200"><div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between gap-4"><a class="shrink-0 flex items-center" href="/it/" data-discover="true"><img alt="UCLCampus" class="h-8 md:h-9 w-auto" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzODkgMTAwIiB3aWR0aD0iMzg5IiBoZWlnaHQ9IjEwMCI+CiAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCw1LjApIHNjYWxlKDAuMjEwMjgpIj4KICAgIDxwYXRoIGQ9Ik0gMzM4LjAsMzg3LjUgTCAyNzIuNSwzODcuMCBMIDI3Mi41LDIyNy4wIEwgMjIzLjAsMjI2LjUgTCAyMTMuMCwyMzAuNSBMIDE5My4wLDIyOS41IEwgMTgzLjAsMjI1LjUgTCAxNjkuNSwyMTUuMCBMIDE2Mi41LDIwNS4wIEwgMTU5LjUsMTk5LjAgTCAxNTcuNSwxOTEuMCBMIDE1OC41LDE3MC4wIEwgMTY4LjUsMTQ5LjAgTCAxNzYuNSwxMzkuMCBMIDE4Ni4wLDEzMC41IEwgMTk4LjAsMTIzLjUgTCAyMDguMCwxMjAuNSBMIDIyNi4wLDEyMC41IEwgMjMwLjAsMTIxLjUgTCAyNDEuMCwxMjYuNSBMIDI0OC4wLDEzMS41IEwgMjU1LjUsMTM5LjAgTCAyNjIuNSwxNTEuMCBMIDI2NC41LDE1OS4wIEwgMjY0LjUsMTc0LjAgTCAyNjMuNSwxNzcuMCBMIDMwNS4wLDIwOS41IEwgMzEwLjUsMTk3LjAgTCAzMTMuNSwxODMuMCBMIDMxMi41LDE1NS4wIEwgMzA4LjUsMTQxLjAgTCAzMDEuNSwxMjYuMCBMIDI4OC41LDEwOS4wIEwgMjgxLjAsMTAxLjUgTCAyNjQuMCw4OC41IEwgMjQ2LjAsNzkuNSBMIDIyMi4wLDczLjUgTCAxOTUuMCw3NC41IEwgMTc4LjAsNzkuNSBMIDE2NS4wLDg2LjUgTCAxNjMuNSw4Ni4wIEwgMTYzLjUsMS4wIEwgMzM4LjAsMC41IFoiIGZpbGw9IiM2RkI4Q0UiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPgogICAgPHBhdGggZD0iTSA4Ny4wLDE1NS41IEwgNzIuMCwxNTUuNSBMIDYyLjAsMTUyLjUgTCA1My41LDE0Ni4wIEwgNTAuNSwxNDIuMCBMIDQ2LjUsMTMyLjAgTCA0NS41LDEyNy4wIEwgNDYuMCwwLjUgTCAxMTQuNSwxLjAgTCAxMTQuNSwxMjcuMCBMIDExMS41LDEzOC4wIEwgMTA4LjUsMTQzLjAgTCAxMDEuMCwxNTAuNSBMIDk1LjAsMTUzLjUgTCA4Ny4wLDE1NS41IFogTSAwLjAsMTQ1LjUgTCAyLjUsMTU0LjAgTCA4LjUsMTY2LjAgTCAyMy41LDE4My4wIEwgMzEuMCwxODguNSBMIDQ2LjAsMTk1LjUgTCA2Ny4wLDIwMC41IEwgOTEuMCwyMDAuNSBMIDExMS4wLDE5NS41IEwgMTE3LjUsMjE2LjAgTCAxMjQuNSwyMjkuMCBMIDEzNS41LDI0My4wIEwgMTUzLjAsMjU4LjUgTCAxNjcuMCwyNjcuNSBMIDE4Ny4wLDI3NS41IEwgMjAzLjAsMjc4LjUgTCAyMjMuNSwyNzguMCBMIDIyMy4wLDQyNC41IEwgMC4wLDQyNC41IFoiIGZpbGw9IiMyRjQwOEUiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPgogIDwvZz4KICA8dGV4dCB4PSI4OS4zIiB5PSI2NC4wIiBmb250LWZhbWlseT0iQXJpYWwsIEhlbHZldGljYSwgc2Fucy1zZXJpZiIgZm9udC13ZWlnaHQ9IjcwMCIgZm9udC1zaXplPSI0MCIgZmlsbD0iIzJGNDA4RSI+VUNMQ2FtcHVzPC90ZXh0Pgo8L3N2Zz4="></a><div class="flex items-center gap-4"><a class="hidden sm:inline-flex items-center gap-1.5 text-sm font-semibold text-brand-navy hover:text-brand-blue transition" href="/it/#cursos" data-discover="true"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left" aria-hidden="true"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg> Torna all'offerta formativa</a><div class="relative"><button type="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Italiano" class="appearance-none bg-white border border-slate-300 rounded-full pl-2 pr-2.5 py-1 flex items-center gap-1.5 text-brand-navy hover:text-brand-blue hover:border-brand-blue/60 transition text-xs font-medium"><svg viewBox="0 0 20 14" width="20" height="14" class="rounded-[2px] shrink-0 shadow-[0_0_0_1px_rgba(0,0,0,0.08)]" aria-hidden="true"><rect width="20" height="14" fill="#fff"></rect><rect width="6.67" height="14" fill="#009246"></rect><rect x="13.33" width="6.67" height="14" fill="#ce2b37"></rect></svg>IT<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down transition-transform" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></button></div></div></div></header><section class="bg-gradient-to-b from-brand-mist to-white border-b border-slate-100"><div class="max-w-4xl mx-auto px-4 py-12 md:py-16"><p class="text-sm font-semibold uppercase tracking-wider text-brand-blue mb-3">Dipartimento di Scienze della Salute</p><h1 class="text-3xl md:text-5xl font-bold text-brand-navy tracking-tight">Laurea in Biomedicina</h1><span class="inline-block mt-5 text-xs font-semibold uppercase tracking-wide text-amber-700 bg-amber-50 border border-amber-200 rounded-full px-3 py-1.5">In fase di accreditamento</span></div></section><div class="max-w-4xl mx-auto px-4 py-12"><div class="flex gap-3 bg-amber-50 border border-amber-200 rounded-xl p-5 mb-8"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info text-amber-600 shrink-0 mt-0.5" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg><p class="text-sm text-amber-900 leading-relaxed">La informiamo che questo programma è attualmente in fase di accreditamento da parte dell'Autorità per l'Istruzione Superiore e Post-secondaria di Malta (MFHEA). Se desidera manifestare il suo interesse a iscriversi a questo programma educativo, la preghiamo di contattarci all'indirizzo info@uclcampus.com. L'accordo studente, che include il pagamento delle tasse di iscrizione e di immatricolazione, sarà firmato solo dopo che la MFHEA avrà approvato l'accreditamento di questo programma educativo.</p></div><p class="text-slate-600 leading-relaxed mb-8">Stiamo preparando le informazioni dettagliate di questo programma. Presto troverai qui il piano di studi, i requisiti di accesso e gli sbocchi professionali.</p><div class="bg-brand-navy rounded-xl p-8 text-center"><p class="text-xl font-bold text-white mb-4">Vuoi iscriverti a questo programma?</p><a class="inline-flex items-center gap-2 bg-white hover:bg-brand-mist text-brand-navy px-8 py-3 rounded-lg font-bold transition" href="/it/#contacto" data-discover="true">Richiedi informazioni <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a></div><div class="mt-10"><a class="inline-flex items-center gap-1.5 text-brand-blue hover:text-brand-navy font-semibold transition" href="/it/#cursos" data-discover="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left" aria-hidden="true"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg> Torna all'offerta formativa</a></div></div></div></main><div class="fixed bottom-0 inset-x-0 z-[100] p-4 pointer-events-none" style="opacity: 1; transform: none;"><div class="relative max-w-3xl mx-auto bg-white border border-slate-200 rounded-xl shadow-2xl shadow-slate-900/20 overflow-hidden pointer-events-auto"><div class="p-5"><div class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cookie text-brand-blue shrink-0 mt-0.5" aria-hidden="true"><path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"></path><path d="M8.5 8.5v.01"></path><path d="M16 15.5v.01"></path><path d="M12 12v.01"></path><path d="M11 17v.01"></path><path d="M7 14v.01"></path></svg><div class="flex-1"><h2 class="font-bold mb-1 text-brand-navy">Utilizziamo i cookie</h2><p class="text-sm text-slate-600">Utilizziamo cookie necessari per il funzionamento del sito e, solo con il tuo consenso, cookie analitici e di marketing. Puoi cambiare la tua scelta in qualsiasi momento da <span class="text-brand-blue">Impostazioni cookie</span> nel piè di pagina. Maggiori informazioni nella nostra <a class="underline hover:text-brand-blue transition" href="/cookies" data-discover="true">Informativa sui Cookie</a>.</p></div></div><div class="mt-5 flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-end"><button type="button" class="text-sm text-slate-500 hover:text-brand-blue transition sm:mr-auto">Personalizza</button><button type="button" class="px-5 py-2 rounded-lg text-sm font-semibold border border-slate-300 text-brand-navy hover:bg-slate-100 transition">Rifiuta</button><button type="button" class="px-5 py-2 rounded-lg text-sm font-semibold bg-brand-blue hover:bg-brand-navy text-white transition">Accetta tutti</button></div></div><button type="button" aria-label="Chiudi (equivale a rifiutare i cookie opzionali)" title="Chiudi (equivale a rifiutare i cookie opzionali)" class="absolute top-3 right-3 text-slate-400 hover:text-brand-blue transition"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button></div></div></div></div>
+  
+
+</body></html>
